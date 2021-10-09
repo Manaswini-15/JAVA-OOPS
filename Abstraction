@@ -1,0 +1,18 @@
+Abstraction is the concept of object-oriented programming that “shows” only essential attributes and “hides” unnecessary information.
+The main purpose of abstraction is hiding the unnecessary details from the users.
+Abstraction is selecting data from a larger pool to show only relevant details of the object to the user. It helps in reducing programming complexity and efforts. 
+It is one of the most important concepts of OOPs.
+
+In this example, Bike is an abstract class that contains only one abstract method run.
+Its implementation is provided by the Honda class.
+Example:
+abstract class Bike{  
+  abstract void run();  
+}  
+class Honda4 extends Bike{  
+void run(){System.out.println("running safely");}  
+public static void main(String args[]){  
+ Bike obj = new Honda4();  
+ obj.run();  
+}  
+}  
