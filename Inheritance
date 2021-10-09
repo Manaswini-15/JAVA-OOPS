@@ -1,0 +1,139 @@
+//Inheritance is the process of creating a new class based on a existing class.Extend is a keyword used to create a childclass by inheriting a parent class.Inheritance is a mechanism that allows one class to inherit properties or behaviors from another class. 
+//Multiple classes can inherit from the same parent class, forming a tree-like hierarchy structure. Inheriting classes can add features beyond those inherited from the parent class to allow for unique behavior.
+//There are several types of inheritance available in Java:
+//Single inheritance is when a single subclass inherits from a superclass, forming one layer of inheritance.
+
+import java.io.*;
+class shape 
+{
+  public int lines;
+  public string name;
+}
+class Rectangle extends shape
+{
+   public static void main(String args[])
+   {
+      Rectangle r1=Rectangle();
+      r1.lines=4;
+      r1.name="rectangle";
+      System.out.println("lines:"+r1.lines+"\tname:"+r1.name);
+   }
+}
+
+//Multilevel Inheritance is when a superclass is inherited by an intermediate class, which is then inherited by a derived class, forming 3 or more levels of inheritance.
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+ 
+class one {
+    public void print_geek()
+    {
+        System.out.println("Geeks");
+    }
+}
+ 
+class two extends one {
+    public void print_for() { System.out.println("for"); }
+}
+ 
+class three extends two {
+    public void print_geek()
+    {
+        System.out.println("Geeks");
+    }
+}
+ 
+// Drived class
+public class Main {
+    public static void main(String[] args)
+    {
+        three g = new three();
+        g.print_geek();
+        g.print_for();
+        g.print_geek();
+    }
+}
+
+
+Hierarchical inheritance is when one superclass serves as a baseline for multiple specific subclasses. This is the most common form of inheritance.
+class A {
+    public void print_A() { System.out.println("Class A"); }
+}
+ 
+class B extends A {
+    public void print_B() { System.out.println("Class B"); }
+}
+ 
+class C extends A {
+    public void print_C() { System.out.println("Class C"); }
+}
+ 
+class D extends A {
+    public void print_D() { System.out.println("Class D"); }
+}
+ 
+// Driver Class
+public class Test {
+    public static void main(String[] args)
+    {
+        B obj_B = new B();
+        obj_B.print_A();
+        obj_B.print_B();
+ 
+        C obj_C = new C();
+        obj_C.print_A();
+        obj_C.print_C();
+ 
+        D obj_D = new D();
+        obj_D.print_A();
+        obj_D.print_D();
+    }
+}
+Output
+Class A
+Class B
+Class A
+Class C
+Class A
+Class D
+
+
+Hybrid Inheritance(Through Interfaces): It is a mix of two or more of the above types of inheritance. Since java doesn’t support multiple inheritances with classes, hybrid inheritance is also not possible with classes. In java, we can achieve hybrid inheritance only through Interfaces.
+ class A {
+    public void print_A() { System.out.println("Class A"); }
+}
+ 
+class B extends A {
+    public void print_B() { System.out.println("Class B"); }
+}
+ 
+class C extends A {
+    public void print_C() { System.out.println("Class C"); }
+}
+ 
+class D extends A {
+    public void print_D() { System.out.println("Class D"); }
+}
+ public class Test {
+    public static void main(String[] args)
+    {
+        B obj_B = new B();
+        obj_B.print_A();
+        obj_B.print_B();
+ 
+        C obj_C = new C();
+        obj_C.print_A();
+        obj_C.print_C();
+ 
+        D obj_D = new D();
+        obj_D.print_A();
+        obj_D.print_D();
+    }
+}
+Output
+Class A
+Class B
+Class A
+Class C
+Class A
+Class D
