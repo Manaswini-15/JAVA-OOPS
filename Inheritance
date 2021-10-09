@@ -6,17 +6,18 @@
 import java.io.*;
 class shape 
 {
-  public int lines;
-  public string name;
+  public void print_show()
+  {
+      System.out.println("rectangle");
+  }
+  
 }
 class Rectangle extends shape
 {
    public static void main(String args[])
    {
       Rectangle r1=Rectangle();
-      r1.lines=4;
-      r1.name="rectangle";
-      System.out.println("lines:"+r1.lines+"\tname:"+r1.name);
+      r1.print_show();
    }
 }
 
@@ -26,20 +27,20 @@ import java.lang.*;
 import java.util.*;
  
 class one {
-    public void print_geek()
+    public void print_hello()
     {
-        System.out.println("Geeks");
+        System.out.println("hello");
     }
 }
  
 class two extends one {
-    public void print_for() { System.out.println("for"); }
+    public void print_dear() { System.out.println("\tdear"); }
 }
  
 class three extends two {
-    public void print_geek()
+    public void print_how()
     {
-        System.out.println("Geeks");
+        System.out.println("\tHow are u?");
     }
 }
  
@@ -48,11 +49,13 @@ public class Main {
     public static void main(String[] args)
     {
         three g = new three();
-        g.print_geek();
-        g.print_for();
-        g.print_geek();
+        g.print_hi();
+        g.print_dear();
+        g.print_how();
     }
 }
+output:
+hello dear How are u?
 
 
 Hierarchical inheritance is when one superclass serves as a baseline for multiple specific subclasses. This is the most common form of inheritance.
